@@ -1,0 +1,170 @@
+$out-border-color: rgba(58, 244, 245, 0.2);
+$header-title-height: 46px;
+$header-title-background-color: rgba(44, 254, 255, 0.08);
+$title-font-family: Noto Sans S Chinese;
+$title-font-color: #2cfeff;
+$title-font-size: 14px;
+$panel-background-color: #151b21;
+/* 标题的字体样式 */
+.base-title-font {
+  font-family: $title-font-family;
+  color: $title-font-color;
+  font-size: $title-font-size;
+}
+/* 标题el样式 */
+.base-header-title {
+  height: $header-title-height;
+  line-height: $header-title-height;
+  font-family: $title-font-family;
+  color: $title-font-color;
+  font-size: $title-font-size;
+  background-color: $header-title-background-color;
+  padding-left: 30px;
+  border-bottom: 1px solid $out-border-color;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 4px;
+    height: 14px;
+    background: #f98b39;
+    opacity: 1;
+  }
+}
+/* el-input 自定义样式 */
+.el-input__inner,
+.el-textarea__inner {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(58, 244, 245, 0.2);
+  border-radius: 4px;
+  font-size: 11px;
+  color: #517377;
+  font-family: Noto Sans S Chinese;
+  &::placeholder {
+    font-size: 11px;
+    color: #517377;
+    font-family: Noto Sans S Chinese;
+  }
+}
+/*表单 el-select 自定义样式 */
+.el-cascader .el-cascader__tags .el-tag,
+.el-select .el-tag.el-tag--info {
+  font-family: Noto Sans S Chinese;
+  color: #2cfeff;
+  font-size: 11px;
+  background: rgba(44, 254, 255, 0.23);
+  border: 1px solid #2cfeff;
+  height: 20px;
+  line-height: 20px;
+}
+.el-cascader__tags .el-tag .el-icon-close {
+  flex: none;
+  color: #2cfeff;
+  font-size: 8px;
+  margin-top: 2px;
+}
+.el-select .el-tag__close.el-icon-close {
+  top: -2px;
+  color: #2cfeff;
+}
+
+/*修改表单必填标识颜色*/
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before {
+  color: #f98b39;
+}
+
+/*.el-button.is-disabled的禁用样式*/
+.el-button.is-disabled, .el-button.is-disabled:hover, .el-button.is-disabled:focus, .el-button.is-disabled:active, .el-button.is-loading {
+  opacity: 0.4;
+}
+
+/* 本组件样式 */
+.wrap {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 20px;
+  display: flex;
+  z-index: 100;
+  background-color: #0E1418;
+  .panel-left {
+    flex-shrink: 0;
+    position: relative;
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid #dcdcdc;
+    background-color: $panel-background-color;
+    border: 1px solid $out-border-color;
+    margin-right: 20px;
+  }
+  .panel-center {
+    border: 1px solid $out-border-color;
+    margin-right: 20px;
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: $panel-background-color;
+    .tool-bar {
+      height: $header-title-height;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $out-border-color;
+      background-color: $header-title-background-color;
+    }
+    .x6-graph-box {
+      overflow: hidden;
+      position: absolute;
+      top: $header-title-height;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .x6-graph-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .panel-right {
+    border: 1px solid $out-border-color;
+    flex-shrink: 0;
+    height: 100%;
+    width: 399px;
+    background-color: $panel-background-color;
+    .right-content {
+      height: 100%;
+      padding: 32px 20px;
+      .el-icon-info {
+        margin-right: 10px;
+        color: #468ff4;
+      }
+    }
+    .el-tabs {
+      height: 100%;
+    }
+    .tips-info{
+      color: #468ff4;
+    }
+  }
+}
+
+.x6-graph-scroller {
+  background-image: linear-gradient(
+      90deg,
+      rgba(180, 180, 180, 0.15) 10%,
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%);
+  background-size: 10px 10px;
+  overflow: hidden;
+}
+/*去除graph中的线条*/
+.x6-graph {
+  box-shadow: none !important;
+}
+.x6-graph-pagebreak-vertical,
+.x6-graph-pagebreak-horizontal {
+  border: none;
+}
+
