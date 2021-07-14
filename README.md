@@ -6,7 +6,7 @@
 [](https://github.com/worthworld/vue-x6-dag/blob/main/public/demo.png)
 
 
-[在线demo](https://cli.vuejs.org/config/)
+[在线demo](https://github.com/worthworld/vue-x6-dag/)
 
 
 
