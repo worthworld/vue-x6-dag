@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: true,
   productionSourceMap: false,
-  outputDir: 'docs'
+  outputDir: 'docs',
+  publicPath:"/vue-x6-dag"
 };
