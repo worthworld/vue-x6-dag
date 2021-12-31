@@ -6,7 +6,7 @@
 ![效果图](https://gitee.com/worthworld/dag/raw/master/public/demo.png)
 
 
-[在线demo](https://worthworld.github.io/vue-x6-dag/index.html)
+
 
 
 
